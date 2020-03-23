@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+body {
+    background:#100e17;
+    font-family: Rubik,Lato,lucida grande,lucida sans unicode,Tahoma,Sans-Serif;
+}
+.mat-card{
+    background: #201c29;
+    color: wheat;
+    box-shadow: 0 4px 80px #000;
+}
+
+.wheat{
+    color: wheat;
+}
+
+.news-logo{
+    height: 100px;
+    width: 230px;
+    margin-left: 44%;
+}
+
+.mat-tab-header-pagination-chevron{
+    border-color: wheat !important;
+}
+
+.fs-30{
+    font-size: 30px;
+}
+
+.mat-ink-bar{
+    background-color: greenyellow !important;
+}
+
+.mat-tab-label-content{
+    color: wheat;
+    font-size: 25px;
+}
+
+
+.mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
+    color: olivedrab;
+}
