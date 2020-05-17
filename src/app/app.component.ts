@@ -30,9 +30,7 @@ export class AppComponent {
   displayedColumns: string[] = ['country', 'cases', 'deaths', 'recovered'];
   dataSource:any;
 
-  constructor(private newsapi:NewsApiService){
-
-    console.log('app component constructor called');         
+  constructor(private newsapi:NewsApiService){       
   }
 
   ngOnInit() {
@@ -59,7 +57,6 @@ export class AppComponent {
           data:any)=>{
             this.mPandemic = ((data.parse.text["*"]));
             setTimeout(function(){
-              console.log("yes");
           $('.wikitable tbody tr').each(function() {
             if($(this).find('td:eq(1)').html() != undefined){
               self.PandemicCountry.push((stripHtml($(this).find('th:eq(1)').html()).split('[',1)).toString());
@@ -70,11 +67,6 @@ export class AppComponent {
               deaths:$(this).find('td:eq(1)').html(),recovered:$(this).find('td:eq(2)').html()});
               }
          });
-         console.log(self.PandemicCountry);
-         console.log(self.PandemicCases);
-         console.log(self.PandemicDeaths);
-         console.log(self.PandemicRecovered);
-         console.log(self.PandemicFinalData);
          self.dataSource = self.PandemicFinalData
         },0);
           }
@@ -92,7 +84,6 @@ export class AppComponent {
 
 
   searchArticles(source){
-    console.log("selected source is: "+source);
     this.newsapi.getArticlesByID(source).subscribe(data => this.mArticles = data['articles']);
   }
   
