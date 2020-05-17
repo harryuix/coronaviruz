@@ -15,6 +15,10 @@ api_key = 'e00495ebaf2847a29e1161ede5bfc84b';
    return this.http.get('https://newsapi.org/v2/everything?q=coronavirus&pagesize=100&page=1&apiKey='+this.api_key);
   }
 
+  initPandemic(){
+    return this.http.get('http://en.wikipedia.org/w/api.php?action=parse&format=json&page=Template:COVID-19_pandemic_data&origin=*');
+  }
+
   // initEntertainment(){
   //   return this.http.get('https://newsapi.org/v2/everything?q=entertainment&pagesize=100&page=1&apiKey='+this.api_key);
   // }

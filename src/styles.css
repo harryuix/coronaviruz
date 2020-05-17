@@ -41,3 +41,7 @@ body {
 .mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
     color: olivedrab;
 }
+
+.mat-tab-labels{
+    margin-left:40% !important;
+}

@@ -8,3 +8,11 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+// export type pandemic={
+//   country:any;
+//   cases:any;
+//   deaths:any;
+//   recovered:any;
+
+// }
