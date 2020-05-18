@@ -16,7 +16,7 @@ api_key = 'e00495ebaf2847a29e1161ede5bfc84b';
   }
 
   initPandemic(){
-    return this.http.get('http://en.wikipedia.org/w/api.php?action=parse&format=json&page=Template:COVID-19_pandemic_data&origin=*');
+    return this.http.get('https://en.wikipedia.org/w/api.php?action=parse&format=json&page=Template:COVID-19_pandemic_data&origin=*');
   }
 
   // initEntertainment(){
