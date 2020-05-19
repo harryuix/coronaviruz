@@ -65,7 +65,7 @@ export class AppComponent {
               self.PandemicCases.push($(this).find('td:eq(0)').html());
               self.PandemicDeaths.push($(this).find('td:eq(1)').html());
               self.PandemicRecovered.push($(this).find('td:eq(2)').html());
-              self.PandemicFinalData.push({country:(stripHtml($(this).find('th:eq(1)').html()).split('[',1)).toString(),cases:$(this).find('td:eq(0)').html(),
+              self.PandemicFinalData.push({flag:($(this).find('th:eq(0)').html()),country:(((stripHtml($(this).find('th:eq(1)').html()).split('[',1)).toString())),cases:$(this).find('td:eq(0)').html(),
               deaths:$(this).find('td:eq(1)').html(),recovered:$(this).find('td:eq(2)').html()});
               }
          });
@@ -95,6 +95,7 @@ export class AppComponent {
 }
 
 export interface pandemic{
+  flag:any;
   country:string;
   cases:string;
   deaths:string;
