@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NewsApiService } from './news-api.service';
 import * as $ from "jquery";
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -99,5 +101,7 @@ export interface pandemic{
   recovered:string;
 
 }
+
+
 
 

@@ -54,7 +54,7 @@
   <!-- Symbol Column -->
   <ng-container matColumnDef="recovered">
     <th mat-header-cell *matHeaderCellDef> RECOVERED </th>
-    <td mat-cell *matCellDef="let element"> {{element.recovered}} </td>
+    <td mat-cell *matCellDef="let element"> <span *ngIf="element.recovered.includes('No') == true"> - </span> <span *ngIf="element.recovered.includes('br') == true">{{element.recovered | slice:0:-5}}</span> <span *ngIf="element.recovered.includes('No') == false && element.recovered.includes('br') == false">{{element.recovered}}</span> </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
